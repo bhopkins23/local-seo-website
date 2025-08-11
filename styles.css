@@ -332,17 +332,17 @@ main {
 
 .services-with-image {
     display: flex;
-    align-items: center;
-    gap: 4rem;
+    align-items: flex-start;
+    gap: 3rem;
     margin-top: 3rem;
-    max-width: 1200px;
+    max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .services-image {
-    flex: 1;
-    max-width: 500px;
+    flex: 0 0 45%;
+    max-width: 550px;
 }
 
 .services-image .services-map {
@@ -361,12 +361,12 @@ main {
 }
 
 .services-grid {
-    flex: 1;
+    flex: 0 0 55%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 600px;
+    gap: 1.5rem;
+    align-self: stretch;
 }
 
 .service-card {
@@ -1204,7 +1204,11 @@ footer {
         margin: 0 auto;
     }
     
-    .services-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+    
     .locations-grid,
     .features-grid,
     .services-detailed,
