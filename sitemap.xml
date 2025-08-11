@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<!-- Homepage - Highest Priority -->
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+</url>
+
+<!-- Primary Location Pages - High Priority -->
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/seo-services-newtown-pa/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/seo-services-bucks-county/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+<!-- Core Service Pages - High Priority -->
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/local-seo-services/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/small-business-seo/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/google-business-profile-optimization/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/website-optimization/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<!-- Secondary Location Pages -->
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/seo-services-yardley-pa/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+</url>
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/seo-services-langhorne-pa/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+</url>
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/seo-services-doylestown-pa/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+</url>
+
+<!-- Additional Service Pages -->
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/digital-marketing-services/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/social-media-marketing/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/search-engine-marketing/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/affordable-seo-packages/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+<!-- Resource/Content Pages -->
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/best-marketing-agencies-bucks-county/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://bhopkins23.github.io/local-seo-website/blog/seo-guide-bucks-county-businesses/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+</urlset>

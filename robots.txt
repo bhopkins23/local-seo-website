@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Important pages for crawling priority
+Allow: /local-seo-services/
+Allow: /small-business-seo/
+Allow: /google-business-profile-optimization/
+Allow: /website-optimization/
+Allow: /seo-services-newtown-pa/
+Allow: /seo-services-bucks-county/
+Allow: /seo-services-yardley-pa/
+Allow: /seo-services-langhorne-pa/
+Allow: /seo-services-doylestown-pa/
+
+# Block system files and directories
+Disallow: /AppData/
+Disallow: /3D Objects/
+Disallow: /Saved Games/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /*.log
+Disallow: /*.bat
+
+# Sitemap location
+Sitemap: https://bhopkins23.github.io/local-seo-website/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

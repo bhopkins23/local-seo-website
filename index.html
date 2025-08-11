@@ -6,15 +6,48 @@
     <meta name="description" content="Digital marketing company serving Newtown PA and Bucks County. Best marketing company in Bucks County offering SEO, local SEO, and online marketing services.">
     <meta name="keywords" content="digital marketing Newtown PA, marketing company Bucks County, best marketing company in Bucks County, online marketing Bucks County">
     <title>Digital Marketing Newtown PA | Marketing Company Bucks County</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preconnect to external resources for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS inline for faster rendering -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    
+    <!-- Favicon for professional appearance -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌟</text></svg>">
+    
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="First Light Marketing | Digital Marketing Newtown PA">
+    <meta property="og:description" content="Premier digital marketing company serving Bucks County. Local SEO, small business SEO, and comprehensive online marketing services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bhopkins23.github.io/local-seo-website/">
+    <meta property="og:image" content="https://bhopkins23.github.io/local-seo-website/company-logo.svg">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="First Light Marketing | Digital Marketing Newtown PA">
+    <meta name="twitter:description" content="Premier digital marketing company serving Bucks County. Local SEO, small business SEO, and comprehensive online marketing services.">
+    <meta name="twitter:image" content="https://bhopkins23.github.io/local-seo-website/company-logo.svg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bhopkins23.github.io/local-seo-website/">
+    
+    <!-- DNS prefetch for performance -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "Organization", "DigitalMarketingAgency"],
         "name": "First Light Marketing",
-        "description": "Digital marketing company serving Newtown PA and Bucks County",
-        "url": "https://www.premierdigitalmarketing.com",
+        "legalName": "First Light Marketing LLC",
+        "description": "Premier digital marketing company serving Newtown PA and Bucks County. Specializing in local SEO, small business SEO, Google Business Profile optimization, and comprehensive digital marketing services.",
+        "url": "https://bhopkins23.github.io/local-seo-website/",
         "telephone": "+1-215-555-0123",
+        "email": "info@firstlightmarketing.com",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "123 Main Street",
@@ -30,18 +63,114 @@
         },
         "openingHours": "Mo-Fr 09:00-17:00",
         "sameAs": [
-            "https://www.facebook.com/premierdigitalmarketing",
-            "https://www.linkedin.com/company/premierdigitalmarketing"
+            "https://www.facebook.com/firstlightmarketing",
+            "https://www.linkedin.com/company/firstlightmarketing",
+            "https://twitter.com/firstlightmktg"
         ],
-        "serviceArea": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 40.2259,
-                "longitude": -74.9326
+        "serviceArea": [
+            {
+                "@type": "City",
+                "name": "Newtown",
+                "containedInPlace": {
+                    "@type": "State",
+                    "name": "Pennsylvania"
+                }
             },
-            "geoRadius": "50000"
-        }
+            {
+                "@type": "AdministrativeArea",
+                "name": "Bucks County",
+                "containedInPlace": {
+                    "@type": "State", 
+                    "name": "Pennsylvania"
+                }
+            }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital Marketing Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Local SEO Services",
+                        "description": "Local search engine optimization for Bucks County businesses"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Small Business SEO",
+                        "description": "SEO services tailored for small businesses in Bucks County"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Google Business Profile Optimization",
+                        "description": "Google Business Profile setup and optimization services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Website Optimization",
+                        "description": "Website optimization and performance improvement services"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "47"
+        },
+        "priceRange": "$$"
+    }
+    </script>
+    
+    <!-- FAQ Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What digital marketing services do you offer in Bucks County?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "First Light Marketing offers comprehensive digital marketing services including Local SEO, Small Business SEO, Google Business Profile optimization, website optimization, social media marketing, and search engine marketing for businesses throughout Bucks County PA."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you provide SEO services in Newtown PA?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! We specialize in SEO services for Newtown PA businesses. Our local SEO strategies help Newtown businesses dominate local search results and attract more customers from the surrounding Bucks County area."
+                }
+            },
+            {
+                "@type": "Question", 
+                "name": "How long does it take to see SEO results for my Bucks County business?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most Bucks County businesses start seeing SEO improvements within 3-6 months, with significant ranking improvements typically occurring within 6-12 months. Local SEO results often appear faster, sometimes within 2-3 months for Google Business Profile optimization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What makes First Light Marketing the best marketing company in Bucks County?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our deep local market knowledge, proven track record with Bucks County businesses, comprehensive service offerings, and personalized approach make us the top choice. We understand the unique challenges and opportunities in markets from Newtown to Doylestown."
+                }
+            }
+        ]
     }
     </script>
 </head>
