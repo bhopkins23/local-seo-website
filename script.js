@@ -1,5 +1,54 @@
-// Smooth scrolling for navigation links
+// Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+    }
+
+    // Mobile dropdown functionality
+    dropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('a[href="#services"], a[href="#locations"]');
+        if (dropdownLink) {
+            dropdownLink.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
+
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-menu a:not(.dropdown > a)');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                mobileMenuToggle?.classList.remove('active');
+                navMenu?.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Close mobile menu on resize to desktop
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            mobileMenuToggle?.classList.remove('active');
+            navMenu?.classList.remove('active');
+            document.body.style.overflow = '';
+            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+        }
+    });
     // Smooth scrolling for anchor links
     const links = document.querySelectorAll('a[href^="#"]');
     
