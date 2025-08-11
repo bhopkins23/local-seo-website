@@ -44,6 +44,12 @@ body {
     font-weight: bold;
 }
 
+.nav-logo .logo {
+    height: 40px;
+    width: auto;
+    max-width: 250px;
+}
+
 .nav-logo p {
     color: #4299e1;
     font-size: 0.9rem;
