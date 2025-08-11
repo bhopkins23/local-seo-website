@@ -330,15 +330,43 @@ main {
     margin-right: auto;
 }
 
+.services-with-image {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.services-image .services-map {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    object-fit: contain;
+    loading: lazy;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-image .services-map:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
 .services-grid {
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 600px;
 }
 
 .service-card {
@@ -1163,6 +1191,17 @@ footer {
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+    }
+    
+    .services-with-image {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .services-image {
+        max-width: 400px;
+        margin: 0 auto;
     }
     
     .services-grid,
