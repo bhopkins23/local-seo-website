@@ -38,6 +38,12 @@ body {
     align-items: center;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .nav-logo h1 {
     color: #fff;
     font-size: 1.8rem;
@@ -45,15 +51,17 @@ body {
 }
 
 .nav-logo .logo {
-    height: 40px;
+    height: 60px;
     width: auto;
-    max-width: 250px;
+    max-width: 400px;
+    object-fit: contain;
 }
 
-.nav-logo p {
+.nav-logo .tagline {
     color: #4299e1;
-    font-size: 0.9rem;
-    margin-top: -5px;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
 .nav-menu {
@@ -1033,6 +1041,31 @@ footer {
         justify-content: space-between;
         align-items: center;
     }
+    
+    .nav-logo {
+        gap: 10px;
+    }
+    
+    .nav-logo .logo {
+        height: 45px;
+        max-width: 300px;
+    }
+    
+    .nav-logo .tagline {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo .tagline {
+        display: none; /* Hide tagline on very small screens */
+    }
+    
+    .nav-logo .logo {
+        height: 40px;
+        max-width: 250px;
+    }
+}
     
     /* Hero Section Mobile Optimizations */
     .hero {
