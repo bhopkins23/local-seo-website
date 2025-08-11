@@ -216,15 +216,31 @@ main {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    background: 
+        linear-gradient(rgba(26, 54, 93, 0.8), rgba(45, 55, 72, 0.8)),
+        url('local-seo-hero-banner.svg') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
     padding: 80px 20px;
     text-align: center;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
+    z-index: 2;
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
 }
 
 .hero h1 {
@@ -1016,6 +1032,18 @@ footer {
     .nav-container {
         justify-content: space-between;
         align-items: center;
+    }
+    
+    /* Hero Section Mobile Optimizations */
+    .hero {
+        background-attachment: scroll; /* Fixed backgrounds can cause issues on mobile */
+        min-height: 400px;
+        padding: 60px 20px;
+    }
+    
+    .hero-content {
+        padding: 30px 20px;
+        backdrop-filter: blur(5px); /* Reduce blur on mobile for better performance */
     }
     
     .mobile-menu-toggle {
