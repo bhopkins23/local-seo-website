@@ -311,7 +311,13 @@ main {
 /* Services Overview */
 .services-overview {
     padding: 80px 20px;
-    background-color: #f7fafc;
+    background: 
+        linear-gradient(rgba(247, 250, 252, 0.92), rgba(247, 250, 252, 0.92)),
+        url('homepage-services-google-map.svg') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
 }
 
 .services-overview h2 {
@@ -330,51 +336,25 @@ main {
     margin-right: auto;
 }
 
-.services-with-image {
-    display: flex;
-    align-items: flex-start;
-    gap: 3rem;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
     margin-top: 3rem;
-    max-width: 1300px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.services-image {
-    flex: 0 0 45%;
-    max-width: 550px;
-}
-
-.services-image .services-map {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    object-fit: contain;
-    loading: lazy;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.services-image .services-map:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-.services-grid {
-    flex: 0 0 55%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1.5rem;
-    align-self: stretch;
-}
-
 .service-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .service-card:hover {
@@ -1193,15 +1173,8 @@ footer {
         align-items: center;
     }
     
-    .services-with-image {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-    }
-    
-    .services-image {
-        max-width: 400px;
-        margin: 0 auto;
+    .services-overview {
+        background-attachment: scroll; /* Fixed backgrounds can cause issues on mobile */
     }
     
     .services-grid {
