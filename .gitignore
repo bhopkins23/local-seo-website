@@ -1,0 +1,35 @@
+# Windows system files
+NTUSER.DAT*
+ntuser.dat*
+ntuser.ini
+.gitconfig
+
+# Windows folders
+AppData/
+"Application Data"/
+Contacts/
+Cookies/
+Downloads/
+Favorites/
+IntelGraphicsProfiles/
+Links/
+"Local Settings"/
+MicrosoftEdgeBackups/
+Music/
+"My Documents"/
+NetHood/
+OneDrive/
+Pictures/
+PrintHood/
+Recent/
+"Saved Games"/
+Searches/
+SendTo/
+"Start Menu"/
+Templates/
+Videos/
+"3D Objects"/
+
+# Claude files
+.claude/
+.claude.json*
