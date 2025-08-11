@@ -405,15 +405,41 @@ main {
     margin-right: auto;
 }
 
+.locations-with-image {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.locations-image {
+    flex: 0 0 45%;
+    max-width: 500px;
+}
+
+.locations-image .areas-map {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.locations-image .areas-map:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
 .locations-grid {
+    flex: 0 0 55%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .location-card {
@@ -451,10 +477,85 @@ main {
     color: #3182ce;
 }
 
+/* About Section */
+.about-section {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.about-with-image {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    flex: 0 0 60%;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a365d;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #4a5568;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.highlight h4 {
+    font-size: 1.2rem;
+    color: #1a365d;
+    margin-bottom: 0.5rem;
+}
+
+.highlight p {
+    font-size: 1rem;
+    color: #718096;
+    margin-bottom: 0;
+}
+
+.about-image {
+    flex: 0 0 40%;
+    max-width: 400px;
+}
+
+.about-image .team-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image .team-photo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
 /* Why Choose Us */
 .why-choose-us {
     padding: 80px 20px;
-    background-color: #f7fafc;
+    background: 
+        linear-gradient(rgba(247, 250, 252, 0.90), rgba(247, 250, 252, 0.90)),
+        url('why-choose-us-background.svg') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
 }
 
 .why-choose-us h2 {
@@ -488,8 +589,14 @@ main {
 /* Contact Section */
 .contact {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    background: 
+        linear-gradient(rgba(26, 54, 93, 0.85), rgba(45, 55, 72, 0.85)),
+        url('contact-section-background.svg') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
+    position: relative;
 }
 
 .contact h2 {
@@ -1173,13 +1280,47 @@ footer {
         align-items: center;
     }
     
-    .services-overview {
+    .services-overview,
+    .why-choose-us,
+    .contact {
         background-attachment: scroll; /* Fixed backgrounds can cause issues on mobile */
     }
     
     .services-grid {
         grid-template-columns: 1fr;
         max-width: none;
+    }
+    
+    .locations-with-image {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .locations-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-with-image {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .about-content,
+    .about-image {
+        flex: none;
+        max-width: none;
+    }
+    
+    .about-highlights {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .locations-grid,
