@@ -464,6 +464,443 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Additional Styling for New Pages */
+
+/* Page Hero Sections */
+.page-hero {
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    color: white;
+    padding: 120px 20px 80px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.page-hero .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 60px 20px;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #1a365d;
+}
+
+/* Service Detail Pages */
+.services-detailed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-detail {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-detail h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #1a365d;
+}
+
+.service-detail ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.service-detail ul li {
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+}
+
+/* Process Timeline */
+.process-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.step-number {
+    background: #4299e1;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #1a365d;
+}
+
+/* Success Stories */
+.success-stories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.success-story {
+    background: #f7fafc;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid #4299e1;
+}
+
+.success-story h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #1a365d;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.result {
+    background: #4299e1;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Package Styling */
+.packages-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.package {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.package.featured {
+    border-color: #4299e1;
+    transform: scale(1.05);
+}
+
+.popular-badge {
+    background: #4299e1;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 15px;
+}
+
+.package-header {
+    background: #f7fafc;
+    padding: 2rem;
+    text-align: center;
+}
+
+.package-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1a365d;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4299e1;
+    margin: 1rem 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #718096;
+}
+
+.package-features {
+    padding: 2rem;
+}
+
+.package-features h4 {
+    margin-bottom: 1rem;
+    color: #1a365d;
+}
+
+.package-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.package-features ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.package-features ul li:before {
+    content: "✓";
+    color: #48bb78;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.package-ideal {
+    padding: 1rem 2rem;
+    background: #edf2f7;
+    font-size: 0.9rem;
+}
+
+.package-cta {
+    display: block;
+    background: #4299e1;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.package-cta:hover {
+    background: #3182ce;
+}
+
+/* Comparison Table */
+.comparison-table-wrapper {
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.comparison-table th {
+    background: #1a365d;
+    color: white;
+    font-weight: bold;
+}
+
+.comparison-table th span {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #4299e1;
+}
+
+/* Add-on Services */
+.add-ons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.add-on {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.add-on h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1a365d;
+}
+
+.add-on-price {
+    color: #4299e1;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+/* Guide Content Styling */
+.guide-content {
+    padding: 40px 20px;
+}
+
+.guide-section {
+    margin: 3rem 0;
+}
+
+.guide-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1a365d;
+    border-bottom: 2px solid #4299e1;
+    padding-bottom: 0.5rem;
+}
+
+.guide-section h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem 0;
+    color: #2d3748;
+}
+
+.guide-section ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.guide-section ul li {
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+}
+
+.guide-cta {
+    background: #f7fafc;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.guide-cta h2 {
+    margin-bottom: 1rem;
+}
+
+/* Contact Info Box */
+.contact-info-box {
+    background: #1a365d;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.contact-info-box h3 {
+    color: #4299e1;
+    margin-bottom: 1rem;
+}
+
+/* Metrics and Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat {
+    text-align: center;
+    padding: 2rem;
+    background: #f7fafc;
+    border-radius: 10px;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    color: #4299e1;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.metric-card, .benefit-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.metric-card:hover, .benefit-card:hover {
+    transform: translateY(-3px);
+}
+
+.metric-card h3, .benefit-card h3 {
+    color: #1a365d;
+    margin-bottom: 1rem;
+}
+
+/* Guarantee Box */
+.guarantee-box {
+    background: #e6fffa;
+    border: 2px solid #38b2ac;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.guarantee-box h4 {
+    color: #234e52;
+    margin-bottom: 0.5rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
@@ -485,7 +922,7 @@ footer {
         margin-top: 0.5rem;
     }
     
-    .hero h1 {
+    .hero h1, .page-hero h1 {
         font-size: 2rem;
     }
     
@@ -500,11 +937,33 @@ footer {
     
     .services-grid,
     .locations-grid,
-    .features-grid {
+    .features-grid,
+    .services-detailed,
+    .packages-comparison,
+    .success-stories {
         grid-template-columns: 1fr;
     }
     
     .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .package.featured {
+        transform: none;
+    }
+    
+    .comparison-table {
+        font-size: 0.9rem;
+    }
+    
+    .stats-grid,
+    .metrics-grid,
+    .add-ons-grid {
         grid-template-columns: 1fr;
     }
 }
