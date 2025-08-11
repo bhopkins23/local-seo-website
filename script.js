@@ -1,50 +1,80 @@
 // Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing mobile menu...');
+    
     // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const dropdowns = document.querySelectorAll('.dropdown');
 
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navMenu.classList.toggle('active');
+    console.log('Mobile menu toggle found:', !!mobileMenuToggle);
+    console.log('Nav menu found:', !!navMenu);
+    console.log('Dropdowns found:', dropdowns.length);
+
+    if (mobileMenuToggle && navMenu) {
+        // Add both click and touchstart for better mobile support
+        function toggleMenu(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Hamburger clicked/touched!');
             
-            // Prevent body scroll when menu is open
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-        });
+            const isActive = mobileMenuToggle.classList.contains('active');
+            
+            if (isActive) {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+                console.log('Menu closed');
+            } else {
+                mobileMenuToggle.classList.add('active');
+                navMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                console.log('Menu opened');
+            }
+        }
+        
+        mobileMenuToggle.addEventListener('click', toggleMenu);
+        mobileMenuToggle.addEventListener('touchstart', toggleMenu, { passive: false });
+    } else {
+        console.error('Mobile menu toggle or nav menu not found!');
     }
 
     // Mobile dropdown functionality
     dropdowns.forEach(dropdown => {
-        const dropdownLink = dropdown.querySelector('a[href="#services"], a[href="#locations"]');
-        if (dropdownLink) {
+        const dropdownLink = dropdown.querySelector('a');
+        if (dropdownLink && (dropdownLink.textContent.includes('Services') || dropdownLink.textContent.includes('Locations'))) {
             dropdownLink.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
                     dropdown.classList.toggle('active');
+                    console.log('Dropdown toggled:', dropdown.classList.contains('active'));
                 }
             });
         }
     });
 
-    // Close mobile menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-menu a:not(.dropdown > a)');
+    // Close mobile menu when clicking on actual navigation links
+    const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
-                mobileMenuToggle?.classList.remove('active');
-                navMenu?.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
+        // Only add close functionality to actual page links, not dropdown toggles
+        if (!link.parentElement.classList.contains('dropdown') || 
+            (!link.textContent.includes('Services') && !link.textContent.includes('Locations'))) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768 && mobileMenuToggle && navMenu) {
+                    mobileMenuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                    console.log('Menu closed after link click');
+                }
+            });
+        }
     });
 
     // Close mobile menu on resize to desktop
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            mobileMenuToggle?.classList.remove('active');
-            navMenu?.classList.remove('active');
+        if (window.innerWidth > 768 && mobileMenuToggle && navMenu) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
             document.body.style.overflow = '';
             dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
         }
