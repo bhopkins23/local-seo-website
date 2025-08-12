@@ -2061,3 +2061,300 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* New Small Business SEO Tips Section Styles */
+.implementation-promise {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.promise-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.promise-stat {
+    text-align: center;
+}
+
+.promise-stat .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.promise-stat p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.seo-tips-modern {
+    margin: 3rem 0;
+}
+
+.tip-category {
+    margin: 3rem 0;
+}
+
+.tip-category h3 {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    border-radius: 10px;
+    border-left: 5px solid #4299e1;
+}
+
+.tip-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.tip-card.featured {
+    border: 2px solid #4299e1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(66, 153, 225, 0.15);
+}
+
+.tip-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tip-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4299e1, #667eea);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tip-header h4 {
+    font-size: 1.3rem;
+    color: #2d3748;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.impact-badge {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tip-content p {
+    margin-bottom: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.action-steps {
+    background: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.action-steps p {
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.action-steps ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.action-steps li {
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+}
+
+.local-focus {
+    background: linear-gradient(135deg, #ed8936, #dd6b20);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.example-box {
+    background: #edf2f7;
+    border-left: 4px solid #4299e1;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.pro-tip {
+    background: linear-gradient(135deg, #9f7aea, #805ad5);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.implementation-warning {
+    background: #fed7d7;
+    border: 2px solid #fc8181;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 3rem 0;
+}
+
+.implementation-warning h3 {
+    color: #c53030;
+    margin-bottom: 1.5rem;
+}
+
+.warning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.warning-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #f56565;
+}
+
+.warning-item h4 {
+    color: #c53030;
+    margin-bottom: 0.5rem;
+}
+
+.warning-item p {
+    color: #4a5568;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.professional-support-cta {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.professional-support-cta h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.professional-support-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.cta-stat {
+    text-align: center;
+}
+
+.cta-stat .stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4299e1;
+    margin-bottom: 0.5rem;
+}
+
+.cta-stat p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.professional-cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4299e1, #667eea);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.professional-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(66, 153, 225, 0.3);
+}
+
+/* Mobile Responsive Styles for New Tips Section */
+@media (max-width: 768px) {
+    .promise-stats,
+    .cta-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .tip-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .tip-header h4 {
+        font-size: 1.1rem;
+    }
+    
+    .tip-icon {
+        font-size: 1.5rem;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .warning-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .professional-support-cta {
+        padding: 2rem 1rem;
+    }
+    
+    .cta-stat .stat-number {
+        font-size: 2rem;
+    }
+    
+    .promise-stat .stat-number {
+        font-size: 2rem;
+    }
+}
