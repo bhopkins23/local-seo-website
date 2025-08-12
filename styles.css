@@ -470,6 +470,10 @@ main {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .location-card {
@@ -703,11 +707,20 @@ main {
 .contact-form select,
 .contact-form textarea {
     padding: 15px;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
     font-size: 1rem;
     background-color: white;
     color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
 }
 
 .contact-form button {
@@ -869,6 +882,28 @@ footer {
     font-weight: bold;
     font-size: 1.2rem;
     flex-shrink: 0;
+    margin: 0 auto 1rem auto;
+}
+
+/* Center the entire process step content */
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Override for desktop to maintain side-by-side layout */
+@media (min-width: 769px) {
+    .process-step {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .step-number {
+        margin: 0;
+    }
 }
 
 .step-content h3 {
@@ -1474,6 +1509,10 @@ footer {
     .process-step {
         flex-direction: column;
         text-align: center;
+    }
+    
+    .step-number {
+        margin: 0 auto 1rem auto;
     }
     
     .package.featured {
