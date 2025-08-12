@@ -1758,6 +1758,10 @@ footer {
         grid-template-columns: 1fr;
     }
     
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .locations-image {
         max-width: 280px;
     }
@@ -1914,9 +1918,6 @@ footer {
         object-fit: contain;
     }
     
-    .locations-grid {
-        grid-template-columns: 1fr;
-    }
     
     .about-with-image {
         flex-direction: column;
