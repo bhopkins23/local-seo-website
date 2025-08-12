@@ -1794,6 +1794,78 @@ footer {
     margin: 0;
 }
 
+/* GBP Features Redesign - 4+3 Layout */
+.gbp-features .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.gbp-features .feature {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.gbp-features .feature:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #4299e1;
+}
+
+.gbp-features .feature h3 {
+    color: #1a365d;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.gbp-features .feature p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Bottom row (last 3 features) centered */
+.gbp-features .feature:nth-child(n+5) {
+    grid-column: span 1;
+}
+
+.gbp-features .feature:nth-child(5) {
+    grid-column: 1 / 2;
+    margin-left: calc(25% + 1rem);
+}
+
+.gbp-features .feature:nth-child(6) {
+    grid-column: 2 / 3;
+}
+
+.gbp-features .feature:nth-child(7) {
+    grid-column: 3 / 4;
+    margin-right: calc(25% + 1rem);
+}
+
+/* Mobile responsive for GBP features */
+@media (max-width: 768px) {
+    .gbp-features .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .gbp-features .feature:nth-child(n+5) {
+        grid-column: span 1;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 /* Guarantee Box */
 .guarantee-box {
     background: #e6fffa;
