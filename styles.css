@@ -662,12 +662,12 @@ main {
     margin-bottom: 1rem;
     object-fit: contain;
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: brightness(0) invert(1); /* Make icons white */
+    /* Remove the white filter that's causing white boxes */
 }
 
 .contact-method:hover .contact-icon {
     transform: scale(1.1);
-    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(180deg); /* Blue tint on hover */
+    filter: brightness(1.2); /* Simple brightness increase on hover */
 }
 
 .contact-method h3 {
