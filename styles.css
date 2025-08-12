@@ -2666,6 +2666,93 @@ footer {
     }
 }
 
+/* Digital Marketing Benefits 2x2 Grid */
+.digital-marketing-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 3rem 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.digital-marketing-benefits .benefit.featured {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.digital-marketing-benefits .benefit.featured:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #4299e1;
+}
+
+.digital-marketing-benefits .benefit.featured .card-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.digital-marketing-benefits .benefit.featured h3 {
+    color: #1a365d;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.digital-marketing-benefits .benefit.featured .stat-highlight {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.digital-marketing-benefits .benefit.featured p {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Mobile responsive for digital marketing benefits */
+@media (max-width: 768px) {
+    .digital-marketing-benefits {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .digital-marketing-benefits .benefit.featured {
+        padding: 2rem 1.5rem;
+        min-height: 250px;
+    }
+    
+    .digital-marketing-benefits .benefit.featured .card-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .digital-marketing-benefits .benefit.featured h3 {
+        font-size: 1.3rem;
+    }
+}
+
 .tip-header {
     display: flex;
     align-items: center;
