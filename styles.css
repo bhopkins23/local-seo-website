@@ -798,6 +798,7 @@ footer {
     color: white;
     padding: 120px 20px 80px;
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 .page-hero h1 {
@@ -807,53 +808,215 @@ footer {
 }
 
 .page-hero .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+/* Enhanced CTA Buttons for Service Pages */
+.page-hero .cta-buttons {
+    margin-top: 2rem;
+}
+
+.page-hero .btn-primary,
+.page-hero .btn-secondary {
+    font-size: 1.1rem;
+    padding: 16px 32px;
+    margin: 0 10px 10px 0;
+}
+
+/* Section Dividers and Visual Enhancements */
+.what-is-local-seo,
+.benefits,
+.local-insights {
+    background: #f8fafc;
+}
+
+.local-seo-services,
+.case-studies,
+.how-it-works {
+    background: white;
+}
+
+/* Alternating section backgrounds for better visual separation */
+.content-section:nth-child(even) {
+    background: #f8fafc;
+}
+
+.content-section:nth-child(odd) {
+    background: white;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.content-section h2 {
+    font-size: 2.2rem;
     margin-bottom: 2rem;
+    color: #1a365d;
+    text-align: center;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Content Sections */
-.content-section {
-    padding: 60px 20px;
+.content-section > .container > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+    color: #4a5568;
 }
 
-.content-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+/* Service and Location Page Specific Sections */
+.what-is-local-seo,
+.local-seo-services,
+.local-insights,
+.case-studies,
+.how-it-works,
+.benefits,
+.local-business-marketing {
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.what-is-local-seo h2,
+.local-seo-services h2,
+.local-insights h2,
+.case-studies h2,
+.how-it-works h2,
+.benefits h2,
+.local-business-marketing h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
     color: #1a365d;
+    text-align: center;
+}
+
+.what-is-local-seo > .container > p,
+.local-seo-services > .container > p,
+.local-insights > .container > p,
+.case-studies > .container > p,
+.how-it-works > .container > p,
+.benefits > .container > p,
+.local-business-marketing > .container > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+    color: #4a5568;
 }
 
 /* Service Detail Pages */
-.services-detailed {
+.services-detailed,
+.services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 2.5rem;
+    margin: 3rem auto;
+    max-width: 1200px;
 }
 
 .service-detail {
     background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.service-detail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 .service-detail h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a365d;
+    text-align: center;
+}
+
+.service-detail p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.service-detail ul {
+    margin-top: 1.5rem;
+    padding-left: 0;
+    text-align: left;
+    list-style: none;
+}
+
+.service-detail ul li {
+    margin-bottom: 0.8rem;
+    color: #4a5568;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.service-detail ul li:before {
+    content: "✓";
+    color: #4299e1;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Benefit Cards and Insight Cards */
+.local-seo-benefits,
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+}
+
+.benefit-card,
+.insight {
+    background: #f7fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #4299e1;
+}
+
+.benefit-card:hover,
+.insight:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.benefit-card h3,
+.insight h3 {
+    font-size: 1.3rem;
     margin-bottom: 1rem;
     color: #1a365d;
 }
 
-.service-detail ul {
-    margin-top: 1rem;
-    padding-left: 1.5rem;
-}
-
-.service-detail ul li {
-    margin-bottom: 0.5rem;
+.benefit-card p,
+.insight p {
     color: #4a5568;
+    line-height: 1.7;
 }
 
 /* Process Timeline */
@@ -912,25 +1075,46 @@ footer {
     color: #1a365d;
 }
 
-/* Success Stories */
-.success-stories {
+/* Success Stories and Case Studies */
+.success-stories,
+.case-study {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin: 3rem auto;
+    max-width: 1200px;
 }
 
-.success-story {
-    background: #f7fafc;
-    padding: 2rem;
-    border-radius: 10px;
+.success-story,
+.case-study {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    padding: 2.5rem;
+    border-radius: 15px;
     border-left: 5px solid #4299e1;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-.success-story h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+.success-story:hover,
+.case-study:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.success-story h3,
+.case-study h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
     color: #1a365d;
+    text-align: center;
+}
+
+.success-story p,
+.case-study p {
+    color: #4a5568;
+    line-height: 1.8;
+    text-align: center;
 }
 
 .results {
@@ -1485,9 +1669,34 @@ footer {
     .locations-grid,
     .features-grid,
     .services-detailed,
+    .services-grid,
+    .local-seo-benefits,
+    .insights-grid,
     .packages-comparison,
     .success-stories {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .service-detail,
+    .benefit-card,
+    .insight,
+    .success-story,
+    .case-study {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .content-section,
+    .what-is-local-seo,
+    .local-seo-services,
+    .local-insights,
+    .case-studies,
+    .how-it-works,
+    .benefits,
+    .local-business-marketing {
+        padding: 60px 15px;
     }
     
     .feature .feature-icon {
