@@ -986,6 +986,21 @@ footer {
     left: 0;
 }
 
+/* Desktop-only: 2-column layout for service detail checkmarks */
+@media (min-width: 769px) {
+    .service-detail ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        column-gap: 1.5rem;
+    }
+    
+    .service-detail ul li {
+        margin-bottom: 0.8rem;
+        break-inside: avoid;
+    }
+}
+
 /* Benefit Cards and Insight Cards */
 .local-seo-benefits,
 .insights-grid {
