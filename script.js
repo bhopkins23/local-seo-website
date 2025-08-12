@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileMenuToggle && navMenu) {
         // Add both click and touchstart for better mobile support
         function toggleMenu(e) {
+            // Only allow hamburger menu on mobile screens
+            if (window.innerWidth > 768) {
+                console.log('Hamburger menu disabled on desktop');
+                return;
+            }
+            
             e.preventDefault();
             e.stopPropagation();
             console.log('Hamburger clicked/touched!');
@@ -35,11 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.style.overflow = 'hidden';
                 console.log('Menu opened');
             }
-            
-            // Force a repaint
-            navMenu.style.display = 'none';
-            navMenu.offsetHeight; // Trigger reflow
-            navMenu.style.display = '';
         }
         
         // Remove any existing event listeners first
@@ -86,13 +87,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Close mobile menu on resize to desktop
+    // Close mobile menu on resize to desktop and ensure proper navigation display
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768 && mobileMenuToggle && navMenu) {
             mobileMenuToggle.classList.remove('active');
             navMenu.classList.remove('active');
             document.body.style.overflow = '';
             dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+            
+            // Ensure desktop navigation is properly displayed
+            navMenu.style.display = '';
+            navMenu.style.position = '';
+            navMenu.style.right = '';
+            navMenu.style.width = '';
+            navMenu.style.height = '';
+            console.log('Reset to desktop navigation');
         }
     });
     // Smooth scrolling for anchor links

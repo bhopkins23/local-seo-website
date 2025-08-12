@@ -113,7 +113,7 @@ body {
     display: block;
 }
 
-/* Mobile Menu Toggle */
+/* Mobile Menu Toggle - Hidden on desktop, only visible on mobile */
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -128,6 +128,24 @@ body {
     min-height: 40px;
     justify-content: center;
     align-items: center;
+}
+
+/* Ensure desktop navigation is always visible */
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    .nav-menu {
+        display: flex !important;
+        position: static !important;
+        background: none !important;
+        flex-direction: row !important;
+        width: auto !important;
+        height: auto !important;
+        padding: 0 !important;
+        gap: 2rem !important;
+    }
 }
 
 .hamburger-line {
