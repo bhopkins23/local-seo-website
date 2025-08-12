@@ -1377,6 +1377,14 @@ footer {
 }
 
 /* Contact section styling for Local SEO Services page */
+.contact-section h2 {
+    text-align: center;
+}
+
+.contact-section > .container > p {
+    text-align: center;
+}
+
 .contact-section .contact-grid .contact-info h3 {
     text-align: center;
 }
