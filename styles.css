@@ -1847,17 +1847,19 @@ footer {
     flex-grow: 1;
 }
 
-/* Bottom row (last 3 features) - properly centered */
+/* Bottom row (last 3 features) - centered alignment */
 .gbp-features .feature:nth-child(5) {
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
+    margin-left: 50%;
 }
 
 .gbp-features .feature:nth-child(6) {
-    grid-column: 3 / 4;
+    grid-column: 2 / 3;
 }
 
 .gbp-features .feature:nth-child(7) {
-    grid-column: 4 / 5;
+    grid-column: 3 / 4;
+    margin-right: 50%;
 }
 
 /* Mobile responsive for GBP features */
