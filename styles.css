@@ -1228,6 +1228,39 @@ footer {
         height: 40px;
         max-width: 250px;
     }
+    
+    /* Extra small mobile optimizations */
+    .service-card .service-icon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .feature .feature-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .contact-method .contact-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 1rem;
+    }
+    
+    .locations-image {
+        max-width: 280px;
+    }
+    
+    .locations-image .areas-map {
+        max-height: 160px;
+    }
+    
+    .about-image {
+        max-width: 280px;
+    }
+    
+    .about-image .team-photo {
+        max-height: 200px;
+    }
 }
     
     /* Hero Section Mobile Optimizations */
@@ -1339,6 +1372,16 @@ footer {
         max-width: none;
     }
     
+    .service-card {
+        text-align: center;
+    }
+    
+    .service-card .service-icon {
+        margin: 0 auto 1.5rem auto;
+        width: 64px;
+        height: 64px;
+    }
+    
     .locations-with-image {
         flex-direction: column;
         gap: 2rem;
@@ -1346,8 +1389,15 @@ footer {
     }
     
     .locations-image {
-        max-width: 400px;
+        max-width: 300px;
         margin: 0 auto;
+    }
+    
+    .locations-image .areas-map {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
     }
     
     .locations-grid {
@@ -1366,6 +1416,16 @@ footer {
         max-width: none;
     }
     
+    .about-image {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .about-image .team-photo {
+        max-height: 240px;
+        object-fit: cover;
+    }
+    
     .about-highlights {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -1379,8 +1439,20 @@ footer {
         grid-template-columns: 1fr;
     }
     
+    .feature .feature-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 1rem;
+    }
+    
     .contact-info {
         grid-template-columns: 1fr;
+    }
+    
+    .contact-method .contact-icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 1.5rem;
     }
     
     .process-step {
