@@ -1394,6 +1394,179 @@ footer {
     padding-left: 0;
 }
 
+/* Small Business SEO Section Styling */
+.why-small-business-seo .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.why-small-business-seo .section-intro {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #4a5568;
+}
+
+.digital-reality-section {
+    margin-bottom: 4rem;
+}
+
+.subsection-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #1a365d;
+}
+
+.reality-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.reality-stat-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.reality-stat-card .stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.reality-stat-card .stat-description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.challenges-solutions-section {
+    margin-bottom: 4rem;
+}
+
+.challenge-solution-cards {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.challenge-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-left: 5px solid #4299e1;
+}
+
+.challenge-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.challenge-header .challenge-icon {
+    font-size: 2rem;
+}
+
+.challenge-header h4 {
+    color: #1a365d;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.challenge-problem {
+    background: #fef5e7;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #ed8936;
+    line-height: 1.6;
+}
+
+.challenge-solution {
+    background: #f0fff4;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #38a169;
+    line-height: 1.6;
+}
+
+.solution-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.solution-highlights .highlight {
+    background: #4299e1;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.action-cta-section {
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.action-cta-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.action-cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.primary-cta-button {
+    background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.primary-cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .reality-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .challenge-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .solution-highlights {
+        justify-content: center;
+    }
+}
+
 /* Metrics and Stats */
 .stats-grid {
     display: grid;
