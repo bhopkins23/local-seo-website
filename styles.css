@@ -1664,6 +1664,50 @@ footer {
     box-shadow: 0 5px 15px rgba(66, 153, 225, 0.4);
 }
 
+/* Advantages Showcase - Reuse same styling patterns */
+.advantages-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+}
+
+.advantage-card.featured {
+    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.advantage-card.featured:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #4299e1;
+}
+
+.advantage-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.advantage-stats {
+    margin: 1rem 0;
+}
+
+.advantage-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
 /* Desktop - ensure hamburger is completely hidden */
 @media (min-width: 769px) {
     .mobile-menu-toggle {
@@ -1965,6 +2009,17 @@ footer {
     
     .professional-cta {
         padding: 2rem;
+    }
+    
+    /* Apply same styles to advantage showcase */
+    .advantages-showcase {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .advantage-card.featured {
+        padding: 1.5rem;
     }
     
     .feature .feature-icon {
