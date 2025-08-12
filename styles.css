@@ -1666,12 +1666,12 @@ footer {
 
 /* Desktop layout for metrics grid - 2 rows of 4 */
 @media (min-width: 769px) {
-    .metrics-grid {
-        grid-template-columns: repeat(4, 1fr);
+    .website-performance-metrics .metrics-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
         gap: 1.5rem;
     }
     
-    .metric-card {
+    .website-performance-metrics .metric-card {
         min-height: 200px;
     }
 }
