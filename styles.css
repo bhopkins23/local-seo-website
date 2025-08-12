@@ -1057,15 +1057,15 @@ footer {
     flex-direction: column;
 }
 
-/* Override for desktop to maintain side-by-side layout */
+/* Override for desktop to maintain centered layout */
 @media (min-width: 769px) {
     .process-step {
-        flex-direction: row;
-        text-align: left;
+        flex-direction: column;
+        text-align: center;
     }
     
     .step-number {
-        margin: 0;
+        margin: 0 auto 1rem auto;
     }
 }
 
