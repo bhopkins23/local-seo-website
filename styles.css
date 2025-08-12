@@ -41,7 +41,6 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 15px;
 }
 
 .nav-logo h1 {
@@ -51,17 +50,10 @@ body {
 }
 
 .nav-logo .logo {
-    height: 60px;
+    height: 70px;
     width: auto;
-    max-width: 400px;
+    max-width: 300px;
     object-fit: contain;
-}
-
-.nav-logo .tagline {
-    color: #4299e1;
-    font-size: 1rem;
-    font-weight: 500;
-    white-space: nowrap;
 }
 
 .nav-menu {
@@ -1205,28 +1197,16 @@ footer {
         align-items: center;
     }
     
-    .nav-logo {
-        gap: 10px;
-    }
-    
     .nav-logo .logo {
-        height: 45px;
-        max-width: 300px;
-    }
-    
-    .nav-logo .tagline {
-        font-size: 0.85rem;
+        height: 50px;
+        max-width: 250px;
     }
 }
 
 @media (max-width: 480px) {
-    .nav-logo .tagline {
-        display: none; /* Hide tagline on very small screens */
-    }
-    
     .nav-logo .logo {
-        height: 40px;
-        max-width: 250px;
+        height: 45px;
+        max-width: 220px;
     }
     
     /* Extra small mobile optimizations */
