@@ -1664,6 +1664,18 @@ footer {
     margin-top: 2rem;
 }
 
+/* Desktop layout for metrics grid - 2 rows of 4 */
+@media (min-width: 769px) {
+    .metrics-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .metric-card {
+        min-height: 200px;
+    }
+}
+
 .metric-card, .benefit-card {
     background: white;
     padding: 1.5rem;
