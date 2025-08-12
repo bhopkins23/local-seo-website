@@ -1968,20 +1968,24 @@ footer {
 /* Online Visibility Services Redesign */
 .visibility-services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     margin: 3rem auto;
-    max-width: 1200px;
+    max-width: 900px;
 }
 
 .visibility-service.premium {
     background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
     border: 2px solid #e2e8f0;
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .visibility-service.premium:hover {
@@ -1991,11 +1995,26 @@ footer {
 }
 
 .service-header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.visibility-service.premium h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1a365d;
+    font-weight: 600;
+}
+
+.visibility-service.premium p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #4a5568;
+    margin-bottom: 1rem;
+    flex-grow: 1;
 }
 
 .service-icon {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     display: block;
 }
