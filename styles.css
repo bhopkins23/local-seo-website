@@ -27,6 +27,7 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: visible;
 }
 
 .nav-container {
@@ -36,6 +37,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .nav-logo {
@@ -60,6 +62,7 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    position: relative;
 }
 
 .nav-menu a {
@@ -84,12 +87,14 @@ body {
     position: absolute;
     background-color: #2d3748;
     min-width: 220px;
+    width: 220px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1001;
     top: 100%;
     left: 0;
     border-radius: 5px;
     list-style: none;
+    white-space: nowrap;
 }
 
 .dropdown-content li {
@@ -2064,7 +2069,7 @@ footer {
         top: 80px;
         right: -100%;
         width: 100%;
-        height: calc(100vh - 80px);
+        max-height: calc(100vh - 80px);
         background-color: #1a365d !important;
         flex-direction: column;
         padding: 2rem 0;
