@@ -1376,6 +1376,16 @@ footer {
     margin-bottom: 1rem;
 }
 
+/* Contact section styling for Local SEO Services page */
+.contact-section .contact-grid .contact-info h3 {
+    text-align: center;
+}
+
+.contact-section .contact-grid .contact-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 /* Metrics and Stats */
 .stats-grid {
     display: grid;
