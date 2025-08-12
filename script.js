@@ -17,8 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             e.stopPropagation();
             console.log('Hamburger clicked/touched!');
+            console.log('Current window width:', window.innerWidth);
+            console.log('Mobile menu toggle element:', mobileMenuToggle);
+            console.log('Nav menu element:', navMenu);
             
             const isActive = mobileMenuToggle.classList.contains('active');
+            console.log('Menu currently active:', isActive);
             
             if (isActive) {
                 mobileMenuToggle.classList.remove('active');
@@ -31,10 +35,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.style.overflow = 'hidden';
                 console.log('Menu opened');
             }
+            
+            // Force a repaint
+            navMenu.style.display = 'none';
+            navMenu.offsetHeight; // Trigger reflow
+            navMenu.style.display = '';
         }
         
+        // Remove any existing event listeners first
+        mobileMenuToggle.removeEventListener('click', toggleMenu);
+        mobileMenuToggle.removeEventListener('touchstart', toggleMenu);
+        
+        // Add event listeners
         mobileMenuToggle.addEventListener('click', toggleMenu);
         mobileMenuToggle.addEventListener('touchstart', toggleMenu, { passive: false });
+        
+        console.log('Event listeners added to hamburger menu');
     } else {
         console.error('Mobile menu toggle or nav menu not found!');
     }
@@ -118,23 +134,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Mobile menu toggle functionality
-    let mobileMenuOpen = false;
-    const navbar = document.querySelector('.navbar');
-    
-    // Add click handler for mobile menu (if you add a hamburger menu later)
-    document.addEventListener('click', function(e) {
-        if (e.target.matches('.mobile-menu-toggle')) {
-            mobileMenuOpen = !mobileMenuOpen;
-            navbar.classList.toggle('mobile-menu-open', mobileMenuOpen);
-        }
-    });
-
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.navbar') && mobileMenuOpen) {
-            mobileMenuOpen = false;
-            navbar.classList.remove('mobile-menu-open');
+        if (!e.target.closest('.navbar') && mobileMenuToggle && navMenu && navMenu.classList.contains('active')) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+            console.log('Menu closed by clicking outside');
         }
     });
 

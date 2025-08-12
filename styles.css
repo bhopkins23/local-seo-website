@@ -1259,6 +1259,8 @@ footer {
         display: flex !important;
         background: rgba(255, 255, 255, 0.1) !important; /* Debug background */
         border: 1px solid rgba(255, 255, 255, 0.3) !important; /* Debug border */
+        pointer-events: auto !important;
+        z-index: 1002 !important;
     }
     
     .nav-menu {
