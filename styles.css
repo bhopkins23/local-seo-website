@@ -1754,6 +1754,10 @@ footer {
         margin-bottom: 1rem;
     }
     
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
     .locations-image {
         max-width: 280px;
     }
@@ -2028,9 +2032,6 @@ footer {
         margin-bottom: 1rem;
     }
     
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
     
     .contact-method .contact-icon {
         width: 64px;
