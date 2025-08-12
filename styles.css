@@ -134,6 +134,7 @@ body {
 @media (min-width: 769px) {
     .mobile-menu-toggle {
         display: none !important;
+        visibility: hidden !important;
     }
     
     .nav-menu {
@@ -145,6 +146,11 @@ body {
         height: auto !important;
         padding: 0 !important;
         gap: 2rem !important;
+    }
+    
+    /* Remove CSS-generated arrows on desktop since we have them in HTML */
+    .dropdown > a::after {
+        display: none !important;
     }
 }
 
@@ -1206,6 +1212,16 @@ footer {
 .guarantee-box h4 {
     color: #234e52;
     margin-bottom: 0.5rem;
+}
+
+/* Desktop - ensure hamburger is completely hidden */
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
 }
 
 /* Responsive Design */
