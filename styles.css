@@ -1052,6 +1052,31 @@ footer {
     flex-direction: column;
 }
 
+.step-content {
+    text-align: center;
+    width: 100%;
+}
+
+/* Ensure desktop alignment is enforced */
+@media (min-width: 769px) {
+    .process-step {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .step-content {
+        text-align: center;
+    }
+    
+    .step-content h3 {
+        text-align: center;
+    }
+    
+    .step-content p {
+        text-align: center;
+    }
+}
+
 
 .step-content h3 {
     font-size: 1.3rem;
