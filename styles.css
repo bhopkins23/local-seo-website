@@ -1027,11 +1027,6 @@ footer {
     margin-top: 2rem;
 }
 
-.process-step {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-}
 
 .step-number {
     background: #4299e1;
@@ -1057,17 +1052,6 @@ footer {
     flex-direction: column;
 }
 
-/* Override for desktop to maintain centered layout */
-@media (min-width: 769px) {
-    .process-step {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .step-number {
-        margin: 0 auto 1rem auto;
-    }
-}
 
 .step-content h3 {
     font-size: 1.3rem;
@@ -2040,15 +2024,6 @@ footer {
         width: 64px;
         height: 64px;
         margin-bottom: 1.5rem;
-    }
-    
-    .process-step {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .step-number {
-        margin: 0 auto 1rem auto;
     }
     
     .package.featured {
