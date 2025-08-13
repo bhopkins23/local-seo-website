@@ -1,59 +1,86 @@
-// Mobile menu functionality
+// Mobile menu functionality - Simplified and more reliable
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, initializing mobile menu...');
     
-    // Mobile menu toggle
+    // Get elements
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const dropdowns = document.querySelectorAll('.dropdown');
+    const body = document.body;
 
     console.log('Mobile menu toggle found:', !!mobileMenuToggle);
     console.log('Nav menu found:', !!navMenu);
-    console.log('Dropdowns found:', dropdowns.length);
 
     if (mobileMenuToggle && navMenu) {
-        // Add both click and touchstart for better mobile support
-        function toggleMenu(e) {
-            // Only allow hamburger menu on mobile screens
-            if (window.innerWidth > 768) {
-                console.log('Hamburger menu disabled on desktop');
-                return;
-            }
+        // Simple toggle function
+        function toggleMobileMenu() {
+            console.log('Toggle mobile menu called');
             
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('Hamburger clicked/touched!');
-            console.log('Current window width:', window.innerWidth);
-            console.log('Mobile menu toggle element:', mobileMenuToggle);
-            console.log('Nav menu element:', navMenu);
+            // Toggle active classes
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            body.classList.toggle('mobile-menu-open');
             
-            const isActive = mobileMenuToggle.classList.contains('active');
-            console.log('Menu currently active:', isActive);
-            
-            if (isActive) {
-                mobileMenuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflow = '';
-                console.log('Menu closed');
-            } else {
-                mobileMenuToggle.classList.add('active');
-                navMenu.classList.add('active');
-                document.body.style.overflow = 'hidden';
-                console.log('Menu opened');
-            }
+            // Log current state
+            console.log('Menu is now:', navMenu.classList.contains('active') ? 'OPEN' : 'CLOSED');
         }
         
-        // Remove any existing event listeners first
-        mobileMenuToggle.removeEventListener('click', toggleMenu);
-        mobileMenuToggle.removeEventListener('touchstart', toggleMenu);
+        // Close menu function
+        function closeMobileMenu() {
+            console.log('Closing mobile menu');
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            body.classList.remove('mobile-menu-open');
+        }
         
-        // Add event listeners
-        mobileMenuToggle.addEventListener('click', toggleMenu);
-        mobileMenuToggle.addEventListener('touchstart', toggleMenu, { passive: false });
+        // Add click event to hamburger button
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Hamburger button clicked!');
+            toggleMobileMenu();
+        });
         
-        console.log('Event listeners added to hamburger menu');
+        // Add touch event for mobile
+        mobileMenuToggle.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Hamburger button touched!');
+            toggleMobileMenu();
+        });
+        
+        // Close menu when clicking on navigation links
+        const navLinks = navMenu.querySelectorAll('a:not(.dropdown > a)');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Nav link clicked - closing menu');
+                closeMobileMenu();
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (navMenu.classList.contains('active') && 
+                !navMenu.contains(e.target) && 
+                !mobileMenuToggle.contains(e.target)) {
+                console.log('Clicked outside menu - closing');
+                closeMobileMenu();
+            }
+        });
+        
+        // Close menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                console.log('Resized to desktop - closing mobile menu');
+                closeMobileMenu();
+            }
+        });
+        
+        console.log('Mobile menu events attached successfully');
     } else {
-        console.error('Mobile menu toggle or nav menu not found!');
+        console.error('Mobile menu elements not found!');
+        console.log('Toggle element:', mobileMenuToggle);
+        console.log('Nav menu element:', navMenu);
     }
 
     // Mobile dropdown functionality
