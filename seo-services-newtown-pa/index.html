@@ -68,7 +68,7 @@
                     <a href="../"><img src="../horizontal-website-logo-white.png" alt="First Light Marketing" class="logo"></a>
                     <p class="tagline">Newtown PA & Bucks County</p>
                 </div>
-                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -411,5 +411,40 @@
     </footer>
 
     <script src="../script.js"></script>
+    
+    <!-- Inline Mobile Menu Script for Maximum Reliability -->
+    <script>
+        function toggleMobileMenu() {
+            console.log('=== MOBILE MENU TOGGLE CALLED ===');
+            
+            var button = document.querySelector('.mobile-menu-toggle');
+            var menu = document.querySelector('.nav-menu');
+            var body = document.body;
+            
+            console.log('Button found:', !!button);
+            console.log('Menu found:', !!menu);
+            
+            if (button && menu) {
+                var isOpen = menu.classList.contains('active');
+                console.log('Menu currently open:', isOpen);
+                
+                if (isOpen) {
+                    button.classList.remove('active');
+                    menu.classList.remove('active');
+                    body.classList.remove('mobile-menu-open');
+                    console.log('MENU CLOSED');
+                } else {
+                    button.classList.add('active');
+                    menu.classList.add('active');
+                    body.classList.add('mobile-menu-open');
+                    console.log('MENU OPENED');
+                }
+                
+                console.log('After toggle - menu classes:', menu.className);
+            } else {
+                console.error('Button or menu not found!');
+            }
+        }
+    </script>
 </body>
 </html>
