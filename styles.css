@@ -161,11 +161,13 @@ body {
 }
 
 .hamburger-line {
-    width: 25px;
-    height: 3px;
-    background-color: white;
+    width: 28px;
+    height: 4px;
+    background-color: #ffffff !important;
     transition: all 0.3s ease;
     border-radius: 2px;
+    display: block !important;
+    position: relative !important;
 }
 
 .mobile-menu-toggle.active .hamburger-line:first-child {
@@ -2221,17 +2223,22 @@ footer {
     /* Mobile menu toggle - make it visible and clickable */
     .mobile-menu-toggle {
         display: flex !important;
-        background: rgba(255, 255, 255, 0.2) !important;
-        border: 2px solid rgba(255, 255, 255, 0.5) !important;
+        background: rgba(255, 0, 0, 0.3) !important; /* Temporary red background for debugging */
+        border: 3px solid #ffffff !important; /* Bright white border */
         border-radius: 4px !important;
         pointer-events: auto !important;
         z-index: 1002 !important;
         cursor: pointer !important;
         touch-action: manipulation !important;
-        -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
-        min-width: 44px !important;
-        min-height: 44px !important;
-        padding: 8px !important;
+        -webkit-tap-highlight-color: transparent !important;
+        min-width: 50px !important;
+        min-height: 50px !important;
+        padding: 10px !important;
+        position: relative !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 4px !important;
     }
     
     .mobile-menu-toggle:hover,
