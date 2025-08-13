@@ -2217,6 +2217,79 @@ footer {
         height: 50px;
         max-width: 250px;
     }
+    
+    /* Mobile menu toggle - make it visible and clickable */
+    .mobile-menu-toggle {
+        display: flex !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        pointer-events: auto !important;
+        z-index: 1002 !important;
+    }
+    
+    /* Mobile navigation menu */
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 100%;
+        height: auto;
+        max-height: calc(100vh - 80px);
+        background-color: #1a365d !important;
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 0;
+        text-align: center;
+        transition: right 0.3s ease;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 999;
+        display: flex;
+    }
+    
+    .nav-menu.active {
+        right: 0 !important;
+        display: flex !important;
+    }
+    
+    .nav-menu li {
+        margin: 0;
+        border-bottom: 1px solid #2d3748;
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .dropdown-content {
+        position: static !important;
+        background-color: #2d3748 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .dropdown.active .dropdown-content {
+        max-height: 300px;
+    }
+    
+    .dropdown-content li {
+        border-bottom: 1px solid #4a5568;
+    }
+    
+    .dropdown-content a {
+        padding: 0.8rem 3rem !important;
+        font-size: 1rem !important;
+        color: #e2e8f0 !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2270,8 +2343,8 @@ footer {
         max-height: 200px;
     }
 }
-    
-    /* Hero Section Mobile Optimizations */
+
+/* Social Media Benefits 2x2 Grid */
     .hero {
         background-attachment: scroll; /* Fixed backgrounds can cause issues on mobile */
         min-height: 400px;
@@ -2283,82 +2356,6 @@ footer {
         backdrop-filter: blur(5px); /* Reduce blur on mobile for better performance */
     }
     
-    .mobile-menu-toggle {
-        display: flex !important;
-        background: rgba(255, 255, 255, 0.1) !important; /* Debug background */
-        border: 1px solid rgba(255, 255, 255, 0.3) !important; /* Debug border */
-        pointer-events: auto !important;
-        z-index: 1002 !important;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        top: 80px;
-        right: -100%;
-        width: 100%;
-        height: auto;
-        max-height: calc(100vh - 80px);
-        background-color: #1a365d !important;
-        flex-direction: column;
-        padding: 2rem 0;
-        gap: 0;
-        text-align: center;
-        transition: right 0.3s ease;
-        overflow-y: auto;
-        overflow-x: hidden;
-        z-index: 999;
-        display: flex;
-    }
-    
-    .nav-menu.active {
-        right: 0 !important;
-        display: flex !important;
-    }
-    
-    .nav-menu li {
-        margin: 0;
-        border-bottom: 1px solid #2d3748;
-    }
-    
-    .nav-menu a {
-        display: block;
-        padding: 1rem 2rem;
-        font-size: 1.1rem;
-    }
-    
-    .dropdown-content {
-        position: static;
-        display: none;
-        background-color: #2d3748;
-        box-shadow: none;
-        border-radius: 0;
-    }
-    
-    .dropdown.active .dropdown-content {
-        display: block;
-    }
-    
-    .dropdown > a {
-        position: relative;
-    }
-    
-    .dropdown > a::after {
-        content: " ▼";
-        position: absolute;
-        right: 1rem;
-        transition: transform 0.3s ease;
-        font-size: 0.8rem;
-    }
-    
-    .dropdown.active > a::after {
-        transform: rotate(180deg);
-    }
-    
-    .dropdown-content a {
-        padding-left: 3rem !important;
-        font-size: 1rem;
-        color: #cbd5e0;
-    }
     
     .hero h1, .page-hero h1 {
         font-size: 2rem;
