@@ -412,37 +412,22 @@
 
     <script src="../script.js"></script>
     
-    <!-- Inline Mobile Menu Script for Maximum Reliability -->
+    <!-- Simple Mobile Menu Script -->
     <script>
         function toggleMobileMenu() {
-            console.log('=== MOBILE MENU TOGGLE CALLED ===');
+            console.log('Mobile menu toggle clicked');
             
-            var button = document.querySelector('.mobile-menu-toggle');
             var menu = document.querySelector('.nav-menu');
-            var body = document.body;
-            
-            console.log('Button found:', !!button);
-            console.log('Menu found:', !!menu);
-            
-            if (button && menu) {
-                var isOpen = menu.classList.contains('active');
-                console.log('Menu currently open:', isOpen);
-                
-                if (isOpen) {
-                    button.classList.remove('active');
+            if (menu) {
+                if (menu.classList.contains('active')) {
                     menu.classList.remove('active');
-                    body.classList.remove('mobile-menu-open');
-                    console.log('MENU CLOSED');
+                    console.log('Menu closed');
                 } else {
-                    button.classList.add('active');
                     menu.classList.add('active');
-                    body.classList.add('mobile-menu-open');
-                    console.log('MENU OPENED');
+                    console.log('Menu opened');
                 }
-                
-                console.log('After toggle - menu classes:', menu.className);
             } else {
-                console.error('Button or menu not found!');
+                console.log('Menu not found');
             }
         }
     </script>
