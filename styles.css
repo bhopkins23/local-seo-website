@@ -2259,7 +2259,7 @@ footer {
         left: 0 !important;
         width: 100% !important;
         height: 100vh !important;
-        background-color: rgba(255, 0, 0, 0.9) !important; /* Bright red for debugging */
+        background-color: #1a365d !important;
         flex-direction: column !important;
         justify-content: flex-start !important;
         align-items: center !important;
@@ -2267,7 +2267,7 @@ footer {
         margin: 0 !important;
         z-index: 9999 !important;
         gap: 0 !important;
-        border: 5px solid yellow !important; /* Yellow border for visibility */
+        box-shadow: 0 0 20px rgba(0,0,0,0.5) !important;
         
         /* Hidden by default - slide from left */
         transform: translateX(-100%) !important;
