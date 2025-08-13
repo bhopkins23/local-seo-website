@@ -568,13 +568,13 @@
                     </div>
 
                     <div class="contact-form-container">
-                        <form class="contact-form">
-                            <input type="text" placeholder="Business Name" required>
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Email Address" required>
-                            <input type="tel" placeholder="Phone Number">
-                            <input type="text" placeholder="Business Address">
-                            <select required>
+                        <form class="contact-form" action="https://formspree.io/f/xeozdjjy" method="POST">
+                            <input type="text" name="business_name" placeholder="Business Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <input type="tel" name="phone" placeholder="Phone Number">
+                            <input type="text" name="business_address" placeholder="Business Address">
+                            <select name="industry" required>
                                 <option value="">Industry</option>
                                 <option value="restaurant">Restaurant/Food Service</option>
                                 <option value="healthcare">Healthcare/Medical</option>
@@ -585,14 +585,16 @@
                                 <option value="automotive">Automotive</option>
                                 <option value="other">Other</option>
                             </select>
-                            <select required>
+                            <select name="gbp_status" required>
                                 <option value="">Current GBP Status</option>
                                 <option value="not-claimed">Haven't claimed my profile</option>
                                 <option value="claimed-basic">Claimed but basic setup</option>
                                 <option value="claimed-optimized">Claimed and partially optimized</option>
                                 <option value="unsure">Not sure</option>
                             </select>
-                            <textarea placeholder="Tell us about your business and goals for your Google Business Profile" rows="4"></textarea>
+                            <textarea name="message" placeholder="Tell us about your business and goals for your Google Business Profile" rows="4"></textarea>
+                            <input type="hidden" name="_subject" value="New Google Business Profile Audit Request">
+                            <input type="hidden" name="_next" value="https://bhopkins23.github.io/local-seo-website/thank-you.html">
                             <button type="submit">Get My Free GBP Audit</button>
                         </form>
                     </div>

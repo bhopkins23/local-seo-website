@@ -455,13 +455,13 @@
                     </div>
 
                     <div class="contact-form-container">
-                        <form class="contact-form">
-                            <input type="text" placeholder="Business Name" required>
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Email Address" required>
-                            <input type="tel" placeholder="Phone Number">
-                            <input type="text" placeholder="Business Address">
-                            <select required>
+                        <form class="contact-form" action="https://formspree.io/f/xeozdjjy" method="POST">
+                            <input type="text" name="business_name" placeholder="Business Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <input type="tel" name="phone" placeholder="Phone Number">
+                            <input type="text" name="business_address" placeholder="Business Address">
+                            <select name="service_area" required>
                                 <option value="">Primary Service Area</option>
                                 <option value="newtown">Newtown PA</option>
                                 <option value="doylestown">Doylestown PA</option>
@@ -471,7 +471,9 @@
                                 <option value="levittown">Levittown PA</option>
                                 <option value="county-wide">All of Bucks County</option>
                             </select>
-                            <textarea placeholder="Describe your business and local SEO goals" rows="4"></textarea>
+                            <textarea name="message" placeholder="Describe your business and local SEO goals" rows="4"></textarea>
+                            <input type="hidden" name="_subject" value="New Local SEO Audit Request">
+                            <input type="hidden" name="_next" value="https://bhopkins23.github.io/local-seo-website/thank-you.html">
                             <button type="submit">Get My Free Local SEO Audit</button>
                         </form>
                     </div>

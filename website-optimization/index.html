@@ -488,13 +488,13 @@
                     </div>
 
                     <div class="contact-form-container">
-                        <form class="contact-form">
-                            <input type="text" placeholder="Business Name" required>
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Email Address" required>
-                            <input type="tel" placeholder="Phone Number">
-                            <input type="url" placeholder="Current Website URL" required>
-                            <select required>
+                        <form class="contact-form" action="https://formspree.io/f/xeozdjjy" method="POST">
+                            <input type="text" name="business_name" placeholder="Business Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <input type="tel" name="phone" placeholder="Phone Number">
+                            <input type="url" name="website_url" placeholder="Current Website URL" required>
+                            <select name="optimization_goal" required>
                                 <option value="">Primary Optimization Goal</option>
                                 <option value="traffic">Increase Website Traffic</option>
                                 <option value="rankings">Improve Search Rankings</option>
@@ -503,7 +503,9 @@
                                 <option value="mobile">Mobile Optimization</option>
                                 <option value="comprehensive">Comprehensive Optimization</option>
                             </select>
-                            <textarea placeholder="Tell us about your current website challenges and goals" rows="4"></textarea>
+                            <textarea name="message" placeholder="Tell us about your current website challenges and goals" rows="4"></textarea>
+                            <input type="hidden" name="_subject" value="New Website Optimization Analysis Request">
+                            <input type="hidden" name="_next" value="https://bhopkins23.github.io/local-seo-website/thank-you.html">
                             <button type="submit">Get My Free Website Optimization Analysis</button>
                         </form>
                     </div>

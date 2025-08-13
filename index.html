@@ -390,11 +390,11 @@
                     </div>
                 </div>
                 
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="tel" placeholder="Your Phone">
-                    <select required>
+                <form class="contact-form" action="https://formspree.io/f/xeozdjjy" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone">
+                    <select name="service" required>
                         <option value="">Select Service Interest</option>
                         <option value="local-seo">Local SEO Services</option>
                         <option value="small-business-seo">Small Business SEO</option>
@@ -403,7 +403,9 @@
                         <option value="social-media">Social Media Marketing</option>
                         <option value="digital-marketing">Full Digital Marketing</option>
                     </select>
-                    <textarea placeholder="Tell us about your business and goals" rows="4"></textarea>
+                    <textarea name="message" placeholder="Tell us about your business and goals" rows="4"></textarea>
+                    <input type="hidden" name="_subject" value="New Contact Form Submission from Website">
+                    <input type="hidden" name="_next" value="https://bhopkins23.github.io/local-seo-website/thank-you.html">
                     <button type="submit">Get Free Consultation</button>
                 </form>
             </div>

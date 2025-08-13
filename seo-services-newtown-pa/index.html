@@ -298,11 +298,11 @@
                     </div>
 
                     <div class="contact-form-container">
-                        <form class="contact-form">
-                            <input type="text" placeholder="Business Name" required>
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Email Address" required>
-                            <input type="tel" placeholder="Phone Number">
+                        <form class="contact-form" action="https://formspree.io/f/xeozdjjy" method="POST">
+                            <input type="text" name="business_name" placeholder="Business Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <input type="tel" name="phone" placeholder="Phone Number">
                             <input type="url" placeholder="Website URL">
                             <select required>
                                 <option value="">Select Business Type</option>
@@ -314,7 +314,9 @@
                                 <option value="automotive">Automotive</option>
                                 <option value="other">Other</option>
                             </select>
-                            <textarea placeholder="Tell us about your business and SEO goals" rows="4"></textarea>
+                            <textarea name="message" placeholder="Tell us about your business and SEO goals" rows="4"></textarea>
+                            <input type="hidden" name="_subject" value="New SEO Services Inquiry - Newtown PA">
+                            <input type="hidden" name="_next" value="https://bhopkins23.github.io/local-seo-website/thank-you.html">
                             <button type="submit">Get My Free SEO Audit</button>
                         </form>
                     </div>

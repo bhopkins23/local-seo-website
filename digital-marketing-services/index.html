@@ -289,13 +289,13 @@
                     </div>
 
                     <div class="contact-form-container">
-                        <form class="contact-form">
-                            <input type="text" placeholder="Business Name" required>
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Email Address" required>
-                            <input type="tel" placeholder="Phone Number">
-                            <input type="url" placeholder="Current Website">
-                            <select required>
+                        <form class="contact-form" action="https://formspree.io/f/xeozdjjy" method="POST">
+                            <input type="text" name="business_name" placeholder="Business Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <input type="tel" name="phone" placeholder="Phone Number">
+                            <input type="url" name="website_url" placeholder="Current Website">
+                            <select name="marketing_goal" required>
                                 <option value="">Primary Marketing Goal</option>
                                 <option value="leads">Generate More Leads</option>
                                 <option value="sales">Increase Online Sales</option>
@@ -303,7 +303,9 @@
                                 <option value="traffic">Increase Website Traffic</option>
                                 <option value="comprehensive">Comprehensive Growth</option>
                             </select>
-                            <textarea placeholder="Tell us about your business and current marketing challenges" rows="4"></textarea>
+                            <textarea name="message" placeholder="Tell us about your business and current marketing challenges" rows="4"></textarea>
+                            <input type="hidden" name="_subject" value="New Digital Marketing Analysis Request">
+                            <input type="hidden" name="_next" value="https://bhopkins23.github.io/local-seo-website/thank-you.html">
                             <button type="submit">Get My Free Digital Marketing Analysis</button>
                         </form>
                     </div>
