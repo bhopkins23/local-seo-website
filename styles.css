@@ -2411,13 +2411,13 @@ img {
     max-width: 1200px;
 }
 
-/* Industry Success Showcase - 3x3 Grid */
+/* Industry Success Showcase - 3x3 Grid - Updated 2025 */
 .industry-success-showcase {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin: 2rem auto;
-    max-width: 1200px;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+    margin: 2rem auto !important;
+    max-width: 1200px !important;
 }
 
 .industry-card.premium {
@@ -2504,8 +2504,8 @@ img {
 
 @media (max-width: 768px) {
     .industry-success-showcase {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
     }
 }
 
