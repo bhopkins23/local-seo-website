@@ -11,9 +11,152 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Critical CSS inline for faster rendering -->
+    <!-- Preload LCP image for fastest loading -->
+    <link rel="preload" href="local-seo-hero-banner.svg" as="image" type="image/svg+xml">
+    
+    <!-- Preload deferred JavaScript -->
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Critical CSS for LCP element (hero section) -->
+    <style>
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(45, 55, 72, 0.8)), url('local-seo-hero-banner.svg') center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            z-index: 2;
+            position: relative;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            border-radius: 15px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        .hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #4299e1;
+            font-weight: normal;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        main {
+            margin-top: 80px;
+        }
+        /* Critical navigation styles */
+        .navbar {
+            background-color: #1a365d;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 80px;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+        .nav-logo .logo {
+            height: 70px;
+            width: 300px;
+            object-fit: contain;
+        }
+        /* Critical button styles */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-primary, .btn-secondary {
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-primary {
+            background-color: #4299e1;
+            color: white;
+            border: 2px solid #4299e1;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        /* Font optimization */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-display: swap;
+        }
+        /* Prevent invisible text during font load */
+        .hero h1, .hero h2, .hero p {
+            font-display: swap;
+        }
+        /* Critical mobile menu styles */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+        .hamburger-line {
+            width: 28px;
+            height: 4px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            display: block;
+            margin: 4px 0;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: flex;
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero-content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+    
+    <!-- Non-blocking CSS loading -->
     <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    
+    <!-- Ensure fonts load without blocking render -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
     
     <!-- Favicon for professional appearance -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌟</text></svg>">
@@ -179,7 +322,12 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <a href="./"><img src="horizontal-website-logo-white.png" alt="First Light Marketing" class="logo"></a>
+                    <a href="./">
+                        <picture>
+                            <source type="image/webp" srcset="horizontal-website-logo-white.webp" width="300" height="70">
+                            <img src="horizontal-website-logo-white.png" alt="First Light Marketing" class="logo" width="300" height="70">
+                        </picture>
+                    </a>
                     <p class="tagline">Newtown PA & Bucks County</p>
                 </div>
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
@@ -219,6 +367,8 @@
 
     <main>
         <section id="home" class="hero">
+            <!-- LCP image for discovery and prioritization -->
+            <img src="local-seo-hero-banner.svg" alt="" fetchpriority="high" style="position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none;">
             <div class="hero-content">
                 <h1>Digital Marketing Newtown PA | Marketing Company Bucks County</h1>
                 <h2>Best Marketing Company in Bucks County Delivering Results</h2>
@@ -274,7 +424,7 @@
                 
                 <div class="locations-with-image">
                     <div class="locations-image">
-                        <img src="bucks-county-areas-map.svg" alt="Bucks County Service Areas Map - Newtown, Yardley, Doylestown, Langhorne PA" class="areas-map" loading="lazy">
+                        <img src="bucks-county-areas-map.svg" alt="Bucks County Service Areas Map - Newtown, Yardley, Doylestown, Langhorne PA" class="areas-map" loading="lazy" width="500" height="400">
                     </div>
                     <div class="locations-grid">
                     <div class="location-card">
@@ -327,7 +477,11 @@
                     </div>
                     
                     <div class="about-image">
-                        <img src="about-team-photo.png" alt="First Light Marketing Team - Digital Marketing Experts Bucks County PA" class="team-photo" loading="lazy">
+                        <picture>
+                            <source type="image/webp" srcset="about-team-photo.webp" media="(max-width: 768px)" width="300" height="225">
+                            <source type="image/webp" srcset="about-team-photo.webp" width="400" height="300">
+                            <img src="about-team-photo.png" alt="First Light Marketing Team - Digital Marketing Experts Bucks County PA" class="team-photo" loading="lazy" width="400" height="300">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -462,56 +616,57 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    
-    <!-- Ultra-Simple Mobile Menu Script with Visual Debug -->
+    <!-- Ultra-minimal inline JavaScript -->
     <script>
-        function toggleMobileMenu() {
-            console.log('=== MOBILE MENU CLICKED ===');
-            
-            var menu = document.querySelector('.nav-menu');
-            var button = document.querySelector('.mobile-menu-toggle');
-            
-            console.log('Menu found:', !!menu);
-            console.log('Button found:', !!button);
-            
-            if (menu) {
-                var hasActive = menu.classList.contains('active');
-                console.log('Menu currently has active class:', hasActive);
-                
-                if (hasActive) {
-                    menu.classList.remove('active');
-                    console.log('REMOVED active class');
-                } else {
-                    menu.classList.add('active');
-                    console.log('ADDED active class');
-                }
-                
-                // Visual debugging - change button color
-                if (button) {
-                    button.style.backgroundColor = hasActive ? 'red' : 'green';
-                }
-                
-                console.log('Menu classes after toggle:', menu.className);
-                console.log('Menu computed transform:', window.getComputedStyle(menu).transform);
-            } else {
-                console.error('MENU NOT FOUND!');
+        // Critical mobile menu only
+        window.toggleMobileMenu = function() {
+            var m = document.querySelector('.nav-menu');
+            var b = document.querySelector('.mobile-menu-toggle');
+            if (m) {
+                m.classList.toggle('active');
+                if (b) b.classList.toggle('active');
+                document.body.classList.toggle('mobile-menu-open');
             }
-            console.log('=== END TOGGLE ===');
+        };
+    </script>
+    
+    <!-- Load all JavaScript with maximum deferral -->
+    <script>
+        // Ultra-aggressive lazy loading strategy
+        function loadJS() {
+            if (window.jsLoaded) return;
+            window.jsLoaded = true;
+            
+            const script = document.createElement('script');
+            script.src = 'script-minimal.js';
+            script.async = true;
+            document.head.appendChild(script);
         }
         
-        // Also add direct event listener as backup
-        document.addEventListener('DOMContentLoaded', function() {
-            var button = document.querySelector('.mobile-menu-toggle');
-            if (button) {
-                console.log('Adding backup click listener');
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    toggleMobileMenu();
-                });
+        // Multiple trigger strategies for maximum performance
+        if (document.readyState === 'complete') {
+            // Page already loaded
+            setTimeout(loadJS, 0);
+        } else {
+            // Load on first meaningful interaction
+            let loaded = false;
+            function triggerLoad() {
+                if (loaded) return;
+                loaded = true;
+                loadJS();
             }
-        });
+            
+            // Immediate triggers
+            window.addEventListener('load', triggerLoad, { once: true });
+            
+            // User interaction triggers
+            ['click', 'scroll', 'touchstart', 'keydown'].forEach(event => {
+                document.addEventListener(event, triggerLoad, { once: true, passive: true });
+            });
+            
+            // Fallback timer
+            setTimeout(triggerLoad, 3000);
+        }
     </script>
 </body>
 </html>

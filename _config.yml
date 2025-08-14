@@ -1,0 +1,22 @@
+# Jekyll configuration for GitHub Pages
+plugins:
+  - jekyll-sitemap
+
+# Enable Jekyll processing for static assets
+include:
+  - "_headers"
+
+# Cache-related settings
+sass:
+  style: compressed
+
+# Optimize images and assets
+compress_html:
+  clippings: all
+  comments: all
+  endings: html5
+  ignore:
+    envs: development
+  blanklines: false
+  profile: false
+  startings: html5

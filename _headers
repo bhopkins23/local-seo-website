@@ -1,0 +1,25 @@
+# Cache headers for Netlify (if you migrate from GitHub Pages)
+/*.css
+  Cache-Control: max-age=31536000
+/*.js  
+  Cache-Control: max-age=31536000
+/*.png
+  Cache-Control: max-age=31536000
+/*.jpg
+  Cache-Control: max-age=31536000
+/*.jpeg
+  Cache-Control: max-age=31536000
+/*.gif
+  Cache-Control: max-age=31536000
+/*.svg
+  Cache-Control: max-age=31536000
+/*.webp
+  Cache-Control: max-age=31536000
+/*.woff
+  Cache-Control: max-age=31536000
+/*.woff2
+  Cache-Control: max-age=31536000
+/*.ttf
+  Cache-Control: max-age=31536000
+/*.eot
+  Cache-Control: max-age=31536000
