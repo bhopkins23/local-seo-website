@@ -1,122 +1,102 @@
-console.log('Script.js loading...'); // Debug
+// BASIC TEST - should show in console immediately
+console.log('=== SCRIPT.JS IS NOW LOADING ===');
+alert('JavaScript is working! Check console for debug info.');
 
-// Extremely simple mobile menu
-let mobileMenuOpen = false;
+// Mobile menu variables
+let menuOpen = false;
 
-function toggleMobileMenu() {
-    console.log('Toggle menu function called'); // Debug
+// Simple toggle function
+function toggleMenu() {
+    console.log('🔥 TOGGLE FUNCTION CALLED!');
+    
     const toggle = document.querySelector('.mobile-menu-toggle');
     const menu = document.querySelector('.nav-menu');
     
-    console.log('Toggle element:', toggle); // Debug
-    console.log('Menu element:', menu); // Debug
+    console.log('Toggle button found:', !!toggle);
+    console.log('Menu found:', !!menu);
     
     if (!toggle || !menu) {
-        console.log('ERROR: Elements not found!'); // Debug
+        console.log('❌ CRITICAL ERROR: Elements missing!');
         return;
     }
     
-    mobileMenuOpen = !mobileMenuOpen;
-    console.log('Menu should be open:', mobileMenuOpen); // Debug
+    menuOpen = !menuOpen;
+    console.log('Menu should be:', menuOpen ? 'OPEN' : 'CLOSED');
     
-    if (mobileMenuOpen) {
-        console.log('Opening menu...'); // Debug
-        menu.style.display = 'flex';
+    if (menuOpen) {
+        console.log('✅ OPENING MENU');
         menu.classList.add('active');
         toggle.classList.add('active');
-        document.body.classList.add('mobile-menu-open');
+        menu.style.display = 'flex';
     } else {
-        console.log('Closing menu...'); // Debug
+        console.log('✅ CLOSING MENU');
         menu.classList.remove('active');
         toggle.classList.remove('active');
-        document.body.classList.remove('mobile-menu-open');
-        const dropdowns = menu.querySelectorAll('.dropdown');
+        // Close dropdowns
+        const dropdowns = menu.querySelectorAll('.dropdown.active');
         dropdowns.forEach(dd => dd.classList.remove('active'));
     }
 }
 
-function handleMenuClick(event) {
-    console.log('Menu click handler called, target:', event.target); // Debug
+// Simple menu click handler
+function menuClick(event) {
+    console.log('🔥 MENU CLICK DETECTED!', event.target.tagName);
     
     const link = event.target.closest('a');
     if (!link) {
-        console.log('No link element found'); // Debug
+        console.log('No link found');
         return;
     }
     
-    console.log('Link found:', link.textContent, 'href:', link.href); // Debug
+    console.log('Link clicked:', link.textContent.trim());
+    
     const parent = link.parentElement;
     const isDropdown = parent.classList.contains('dropdown') && link.textContent.includes('▼');
     
     if (isDropdown) {
-        console.log('Handling dropdown toggle'); // Debug
+        console.log('🔽 DROPDOWN TOGGLE');
         event.preventDefault();
         parent.classList.toggle('active');
-        console.log('Dropdown active state:', parent.classList.contains('active')); // Debug
     } else {
-        console.log('Handling regular link click - will close menu'); // Debug
-        // Let the link navigate, then close menu
-        setTimeout(function() {
-            if (mobileMenuOpen) {
-                toggleMobileMenu();
-            }
-        }, 100);
+        console.log('🔗 REGULAR LINK - CLOSING MENU');
+        toggleMenu();
     }
 }
 
-// Initialize immediately when script loads
-function initMobileMenu() {
-    console.log('Initializing mobile menu...'); // Debug
+// Setup function
+function setupMobileMenu() {
+    console.log('🚀 SETTING UP MOBILE MENU');
     
     const toggle = document.querySelector('.mobile-menu-toggle');
     const menu = document.querySelector('.nav-menu');
     
-    console.log('Found toggle:', !!toggle, 'Found menu:', !!menu); // Debug
-    
     if (toggle) {
-        console.log('Adding click listener to toggle'); // Debug
-        toggle.onclick = toggleMobileMenu;
-        toggle.addEventListener('touchstart', function(e) {
-            console.log('Touch start on toggle'); // Debug
-            e.preventDefault();
-            toggleMobileMenu();
-        });
+        console.log('✅ Attaching toggle click');
+        toggle.onclick = toggleMenu;
     } else {
-        console.log('ERROR: Toggle button not found!'); // Debug
+        console.log('❌ No toggle button found!');
     }
     
     if (menu) {
-        console.log('Adding click listener to menu'); // Debug
-        menu.onclick = handleMenuClick;
-        menu.addEventListener('touchstart', handleMenuClick);
+        console.log('✅ Attaching menu click');
+        menu.onclick = menuClick;
     } else {
-        console.log('ERROR: Menu not found!'); // Debug
+        console.log('❌ No menu found!');
     }
 }
 
-// Try to initialize immediately
-if (document.readyState === 'loading') {
-    console.log('DOM still loading, waiting...'); // Debug
-    document.addEventListener('DOMContentLoaded', initMobileMenu);
-} else {
-    console.log('DOM already loaded, initializing now...'); // Debug
-    initMobileMenu();
-}
+// Initialize immediately
+console.log('🎯 Starting initialization...');
+setupMobileMenu();
 
-// Also try after a short delay as fallback
-setTimeout(function() {
-    console.log('Fallback initialization attempt...'); // Debug
-    initMobileMenu();
-}, 1000);
-
-// Form handling
+// Also try when DOM loads
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.contact-form');
-    if (form) {
-        form.onsubmit = function(e) {
-            e.preventDefault();
-            alert('Thank you! We will contact you within 24 hours.');
-            this.reset();
-        };
-    }
+    console.log('🎯 DOM loaded - trying again...');
+    setupMobileMenu();
 });
+
+// And after 2 seconds as final fallback
+setTimeout(function() {
+    console.log('🎯 Fallback setup - trying again...');
+    setupMobileMenu();
+}, 2000);
