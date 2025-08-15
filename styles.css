@@ -3193,10 +3193,13 @@ img {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
+        width: 100% !important;
+        display: block !important;
     }
     
     .dropdown.active .dropdown-content {
-        max-height: 300px;
+        max-height: 500px;
+        display: block !important;
     }
     
     .dropdown-content li {
@@ -3210,6 +3213,20 @@ img {
         pointer-events: auto !important;
         cursor: pointer !important;
         touch-action: manipulation !important;
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: rgba(255,255,255,0.1) !important;
+        color: white !important;
+    }
+    
+    /* Visual indicator for active dropdown */
+    .dropdown.active > a {
+        background-color: rgba(255,255,255,0.1) !important;
+        color: white !important;
     }
 }
 
