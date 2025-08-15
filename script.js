@@ -1,85 +1,122 @@
-// Ultra-basic mobile menu - attach directly to elements
-window.mobileMenuOpen = false;
+console.log('Script.js loading...'); // Debug
 
-window.toggleMobileMenu = function() {
-    console.log('Toggle clicked!'); // Debug
+// Extremely simple mobile menu
+let mobileMenuOpen = false;
+
+function toggleMobileMenu() {
+    console.log('Toggle menu function called'); // Debug
     const toggle = document.querySelector('.mobile-menu-toggle');
     const menu = document.querySelector('.nav-menu');
     
+    console.log('Toggle element:', toggle); // Debug
+    console.log('Menu element:', menu); // Debug
+    
     if (!toggle || !menu) {
-        console.log('Elements not found'); // Debug
+        console.log('ERROR: Elements not found!'); // Debug
         return;
     }
     
-    window.mobileMenuOpen = !window.mobileMenuOpen;
-    console.log('Menu open:', window.mobileMenuOpen); // Debug
+    mobileMenuOpen = !mobileMenuOpen;
+    console.log('Menu should be open:', mobileMenuOpen); // Debug
     
-    if (window.mobileMenuOpen) {
+    if (mobileMenuOpen) {
+        console.log('Opening menu...'); // Debug
         menu.style.display = 'flex';
         menu.classList.add('active');
         toggle.classList.add('active');
         document.body.classList.add('mobile-menu-open');
     } else {
+        console.log('Closing menu...'); // Debug
         menu.classList.remove('active');
         toggle.classList.remove('active');
         document.body.classList.remove('mobile-menu-open');
-        // Close all dropdowns
         const dropdowns = menu.querySelectorAll('.dropdown');
         dropdowns.forEach(dd => dd.classList.remove('active'));
     }
-};
+}
 
-window.handleMenuClick = function(event) {
-    console.log('Menu clicked!', event.target); // Debug
-    event.stopPropagation();
+function handleMenuClick(event) {
+    console.log('Menu click handler called, target:', event.target); // Debug
     
     const link = event.target.closest('a');
     if (!link) {
-        console.log('No link found'); // Debug
+        console.log('No link element found'); // Debug
         return;
     }
     
-    console.log('Link clicked:', link.textContent); // Debug
+    console.log('Link found:', link.textContent, 'href:', link.href); // Debug
     const parent = link.parentElement;
     const isDropdown = parent.classList.contains('dropdown') && link.textContent.includes('▼');
     
     if (isDropdown) {
-        console.log('Dropdown toggle'); // Debug
+        console.log('Handling dropdown toggle'); // Debug
         event.preventDefault();
         parent.classList.toggle('active');
+        console.log('Dropdown active state:', parent.classList.contains('active')); // Debug
     } else {
-        console.log('Regular link - closing menu'); // Debug
-        // Regular link - close menu and navigate
-        window.toggleMobileMenu();
+        console.log('Handling regular link click - will close menu'); // Debug
+        // Let the link navigate, then close menu
+        setTimeout(function() {
+            if (mobileMenuOpen) {
+                toggleMobileMenu();
+            }
+        }, 100);
     }
-};
+}
 
-// Attach events when DOM loads
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, attaching events'); // Debug
+// Initialize immediately when script loads
+function initMobileMenu() {
+    console.log('Initializing mobile menu...'); // Debug
     
     const toggle = document.querySelector('.mobile-menu-toggle');
     const menu = document.querySelector('.nav-menu');
     
+    console.log('Found toggle:', !!toggle, 'Found menu:', !!menu); // Debug
+    
     if (toggle) {
-        console.log('Attaching toggle event'); // Debug
-        toggle.addEventListener('click', window.toggleMobileMenu);
-        toggle.addEventListener('touchstart', window.toggleMobileMenu);
+        console.log('Adding click listener to toggle'); // Debug
+        toggle.onclick = toggleMobileMenu;
+        toggle.addEventListener('touchstart', function(e) {
+            console.log('Touch start on toggle'); // Debug
+            e.preventDefault();
+            toggleMobileMenu();
+        });
+    } else {
+        console.log('ERROR: Toggle button not found!'); // Debug
     }
     
     if (menu) {
-        console.log('Attaching menu event'); // Debug
-        menu.addEventListener('click', window.handleMenuClick);
-        menu.addEventListener('touchstart', window.handleMenuClick);
+        console.log('Adding click listener to menu'); // Debug
+        menu.onclick = handleMenuClick;
+        menu.addEventListener('touchstart', handleMenuClick);
+    } else {
+        console.log('ERROR: Menu not found!'); // Debug
     }
-    
-    // Form handling
+}
+
+// Try to initialize immediately
+if (document.readyState === 'loading') {
+    console.log('DOM still loading, waiting...'); // Debug
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+} else {
+    console.log('DOM already loaded, initializing now...'); // Debug
+    initMobileMenu();
+}
+
+// Also try after a short delay as fallback
+setTimeout(function() {
+    console.log('Fallback initialization attempt...'); // Debug
+    initMobileMenu();
+}, 1000);
+
+// Form handling
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.contact-form');
     if (form) {
-        form.addEventListener('submit', function(e) {
+        form.onsubmit = function(e) {
             e.preventDefault();
             alert('Thank you! We will contact you within 24 hours.');
             this.reset();
-        });
+        };
     }
 });
