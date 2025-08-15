@@ -2485,6 +2485,71 @@ img {
     margin: 0.8rem 0;
 }
 
+/* Override for GBP industry strategy sections */
+.gbp-industry-specific .industry-strategies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: start;
+}
+
+.gbp-industry-specific .industry-strategy {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gbp-industry-specific .industry-strategy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gbp-industry-specific .industry-strategy h3 {
+    color: #2d3748;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4299e1;
+}
+
+.gbp-industry-specific .industry-strategy ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gbp-industry-specific .industry-strategy li {
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+.gbp-industry-specific .industry-strategy li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #48bb78;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .gbp-industry-specific .industry-strategies {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .gbp-industry-specific .industry-strategy {
+        padding: 1.2rem;
+    }
+}
+
 .strategy-tag {
     background: #edf2f7;
     color: #2d3748;
