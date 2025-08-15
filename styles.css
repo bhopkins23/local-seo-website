@@ -53,9 +53,9 @@ body {
 }
 
 .nav-logo .logo {
-    height: 70px;
+    height: 90px;
     width: auto;
-    max-width: 300px;
+    max-width: 400px;
     object-fit: contain;
 }
 
@@ -823,8 +823,8 @@ section h1, article h1, aside h1, nav h1 {
 
 /* Layout Shift Prevention - Stable Image Dimensions */
 .nav-logo .logo {
-    width: 300px;
-    height: 70px;
+    width: 400px;
+    height: 90px;
     object-fit: contain;
     display: block;
 }
@@ -1308,8 +1308,8 @@ img {
     }
     
     .nav-logo .logo {
-        width: 250px;
-        height: 58px;
+        width: 320px;
+        height: 72px;
     }
 }
 
@@ -2877,8 +2877,8 @@ img {
     }
     
     .nav-logo .logo {
-        height: 50px;
-        max-width: 250px;
+        height: 65px;
+        max-width: 320px;
     }
     
     /* Mobile menu toggle - make it visible and clickable */
@@ -2999,8 +2999,8 @@ img {
 
 @media (max-width: 480px) {
     .nav-logo .logo {
-        height: 45px;
-        max-width: 220px;
+        height: 55px;
+        max-width: 280px;
     }
     
     /* Extra small mobile optimizations */
