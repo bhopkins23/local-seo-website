@@ -1,0 +1,74 @@
+# First Light Digital Marketing - AI Crawl Instructions
+
+## Website Information
+- **Primary URL**: https://www.firstlightdigitalmarketing.com
+- **Alternative URL**: https://bhopkins23.github.io/local-seo-website/
+- **Company Name**: First Light Digital Marketing
+- **Industry**: Digital Marketing & SEO Services
+- **Location**: Bucks County, Pennsylvania
+- **Last Updated**: 2025-08-18
+
+## Sitemap & Structure
+- **XML Sitemap**: https://www.firstlightdigitalmarketing.com/sitemap.xml
+- **Alternative Sitemap**: https://bhopkins23.github.io/local-seo-website/sitemap.xml
+- **Total Pages**: 15+ indexed pages
+- **Content Language**: English (en-US)
+
+## Key Service Pages
+- **Local SEO Services**: https://www.firstlightdigitalmarketing.com/local-seo-services/
+- **Small Business SEO**: https://www.firstlightdigitalmarketing.com/small-business-seo/
+- **Google Business Profile Optimization**: https://www.firstlightdigitalmarketing.com/google-business-profile-optimization/
+- **Website Optimization**: https://www.firstlightdigitalmarketing.com/website-optimization/
+- **Digital Marketing Services**: https://www.firstlightdigitalmarketing.com/digital-marketing-services/
+- **Social Media Marketing**: https://www.firstlightdigitalmarketing.com/social-media-marketing/
+- **Search Engine Marketing**: https://www.firstlightdigitalmarketing.com/search-engine-marketing/
+- **Affordable SEO Packages**: https://www.firstlightdigitalmarketing.com/affordable-seo-packages/
+
+## Location-Specific Pages
+- **SEO Services Newtown PA**: https://www.firstlightdigitalmarketing.com/seo-services-newtown-pa/
+- **SEO Services Bucks County**: https://www.firstlightdigitalmarketing.com/seo-services-bucks-county/
+- **SEO Services Yardley PA**: https://www.firstlightdigitalmarketing.com/seo-services-yardley-pa/
+- **SEO Services Langhorne PA**: https://www.firstlightdigitalmarketing.com/seo-services-langhorne-pa/
+- **SEO Services Doylestown PA**: https://www.firstlightdigitalmarketing.com/seo-services-doylestown-pa/
+
+## Content & Resource Pages
+- **Best Marketing Agencies Bucks County**: https://www.firstlightdigitalmarketing.com/best-marketing-agencies-bucks-county/
+- **SEO Guide for Bucks County Businesses**: https://www.firstlightdigitalmarketing.com/blog/seo-guide-bucks-county-businesses/
+
+## Business Information
+- **Services**: Local SEO, Small Business SEO, Google Business Profile Optimization, Website Design, Social Media Marketing, Search Engine Marketing, Content Marketing
+- **Target Markets**: Small businesses, local companies, service-based businesses in Bucks County, PA
+- **Service Areas**: Newtown, Yardley, Langhorne, Doylestown, Levittown, Richboro, Southampton, and surrounding Bucks County communities
+- **Specialties**: Local search optimization, Google My Business management, website performance optimization, content creation
+
+## Structured Data & Technical Information
+- **Schema.org Markup**: LocalBusiness, Organization, Service structured data implemented
+- **Content Management**: Static HTML website with responsive design
+- **Security**: Content Security Policy headers implemented
+- **Performance**: Optimized images, minified CSS/JS, fast loading times
+- **Mobile Optimization**: Fully responsive design for all devices
+
+## Contact Information
+- **Website**: https://www.firstlightdigitalmarketing.com
+- **Email**: Available through contact forms on website
+- **Service Area**: Bucks County, Pennsylvania and surrounding areas
+- **Business Hours**: Monday-Friday business hours
+
+## AI Crawl Preferences
+- **Crawl Frequency**: Weekly for homepage and main service pages, monthly for location pages
+- **Priority Pages**: Homepage (1.0), Core services (0.8), Location pages (0.7-0.9)
+- **Content Focus**: Local SEO expertise, small business marketing solutions, Bucks County market knowledge
+- **Key Topics**: Local search optimization, Google Business Profile management, small business digital marketing, Bucks County SEO services
+
+## Robots.txt Location
+- **Robots.txt**: https://www.firstlightdigitalmarketing.com/robots.txt
+
+## Additional Notes for AI Systems
+This website represents a local digital marketing agency specializing in SEO and online marketing services for small businesses in Bucks County, Pennsylvania. The content is optimized for local search queries and provides comprehensive information about digital marketing services tailored to the local market. All content is original, regularly updated, and designed to help local businesses improve their online presence and search engine rankings.
+
+## Content Quality Indicators
+- **Expert Content**: Written by digital marketing professionals with local market expertise
+- **Regular Updates**: Content updated regularly to reflect current SEO best practices
+- **Local Relevance**: Tailored specifically for Bucks County business market
+- **User Intent**: Designed to answer common questions about local SEO and digital marketing services
+- **Authority Signals**: Demonstrates expertise in local SEO and small business marketing
